@@ -1,8 +1,258 @@
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  --main_text_color: black;
+  --sub_text_color: #899499;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  color: var(--main_text_color);
+  font-family: 'Lato', sans-serif;
+}
+
+/* NAV SECTION */
+
+nav {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 32px 80px;
+
+  z-index: 1;
+}
+
+.back-arrow {
+  margin-right: 24px;
+  color: var(--main);
+
+  cursor: pointer;
+}
+
+nav h5 {
+  letter-spacing: 0.2em;
+  color: var(--sub_text_color);
+}
+
+/* STAT SECTIONS */
+
+.stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  padding: 0 256px;
+}
+
+.stat .inner {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.stat .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 60%;
+}
+
+.stat .right {
+  display: flex;
+  justify-content: center;
+
+  width: 30%;
+}
+
+.stat h1 {
+  font-weight: 400;
+}
+
+.stat h3 {
+  color: var(--sub_text_color);
+  font-weight: 300;
+  font-style: italic;
+
+  margin: 48px 0 0 0;
+}
+
+.stat h3:nth-of-type(1) {
+    padding: 0 0 0 48px;
+}
+
+.stat h3:nth-of-type(2) {
+    padding: 0 0 0 96px;
+}
+
+/* MAP SECTION */
+
+.map {
+  height: 100vh;
+}
+
+.map .inner {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map iframe {
+  height: 70%;
+  width: 70%;
+
+  border: 5px solid black;
+  border-radius: 16px;
+}
+
+/* RESULTS SECTION */
+
+.grading-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 3px solid black;
+  border-radius: 16px;
+
+  padding: 8px;
+
+  height: 240px;
+}
+
+.grading-card h5 {
+  height: 20%;
+
+  font-size: 1.2em;
+}
+
+.grading-card ul {
+  height: 80%;
+
+  list-style-type: none;
+
+  font-size: 0.7em;
+
+  margin-top: 16px;
+}
+
+.grading-card ul li {
+  margin-bottom: 8px;
+
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+#a {
+  display: flex;
+  opacity: 0;
+}
+
+#b {
+  display: none;
+  opacity: 0;
+}
+
+#c {
+  display: none;
+  opacity: 0;
+}
+
+#d {
+  display: none;
+  opacity: 0;
+}
+
+#f {
+  display: none;
+  opacity: 0;
+}
+
+/* FINAL CTA SECTION */
+.cta {
+  height: 100vh;
+}
+
+.cta .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  text-align: center;
+
+}
+
+.end-text a {
+  color: var(--main_text_color);
+  text-decoration: none;
+}
+
+.end-text h1 {
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.end-text h3 {
+  color: var(--sub_text_color);
+  font-weight: 300;
+  font-style: italic;
+
+  margin-bottom: 32px;
+}
+
+.end-text h5 {
+  color: var(--sub_text_color);
+  opacity: 0.6;
+
+  font-weight: 300;
+  font-style: italic;
+
+  letter-spacing: 0.1em;
+}
+
+/* IMAGE OPTIONS */
+/* PRE ANIMATION SETTINGS */
+
+.fas {
+  opacity: 0;
+}
+
+.fa-arrow-left {
+  opacity: 100;
+}
+
+#risc-logo {
+  font-size: 8em;
+
+  opacity: 0;
 }
