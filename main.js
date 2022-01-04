@@ -1,3 +1,4 @@
+import jquery from 'jquery';
 import fullpage from 'fullpage.js';
 import anime from 'animejs';
 
