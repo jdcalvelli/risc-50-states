@@ -12,7 +12,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "animejs": "^3.2.1",
-    "fullpage.js": "^3.1.2",
     "jquery": "^3.6.0"
   }
 }
