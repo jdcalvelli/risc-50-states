@@ -7,7 +7,7 @@ import './style.css';
 
 $(document).ready(function() {
 
-    //add animation for back button
+    //add animation and events for back button
     $('.back-arrow').on('click', function() {
         anime({
             targets: "nav",
