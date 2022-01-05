@@ -20,6 +20,27 @@ $(document).ready(function() {
           });
     });
     
+    //add animation and events for nav arrows
+    $('.nav-arrow')
+        .on('mouseenter', function() {
+            let targetClassName;
+            $(this).hasClass('fa-angle-left') ? targetClassName = '.fa-angle-left' : targetClassName = '.fa-angle-right';
+            anime({
+                targets: targetClassName,
+                scale: 1.5,
+                duration: 200,
+                easing: 'easeInOutSine',
+            });
+        })
+        .on('mouseleave', function() {
+            anime({
+                targets: '.nav-arrow',
+                scale: 1,
+                duration: 200,
+                easing: 'easeInOutSine',
+            });
+        });
+
     //scrollmagic controller and scenes addition
     const controller = new ScrollMagic.Controller();
 
