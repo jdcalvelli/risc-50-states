@@ -125,6 +125,32 @@ nav h5 {
 
 /* RESULTS SECTION */
 
+.grading-container {
+  position: relative;
+}
+
+.grading-container::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2em;
+  content: '\f104';
+
+  position: absolute;
+  top: 50%;
+  right: 105%;
+}
+
+.grading-container::after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2em;
+  content: '\f105';
+
+  position: absolute;
+  top: 50%;
+  left: 105%;
+}
+
 .grading-card {
   display: flex;
   flex-direction: column;
@@ -164,7 +190,7 @@ nav h5 {
 
 #a {
   display: flex;
-  opacity: 0;
+  opacity: 1;
 }
 
 #b {
