@@ -41,42 +41,12 @@ $(document).ready(function() {
             });
         })
         .on('click', function() {
-            
+
             if ($(this).hasClass('fa-angle-right')) {
-                anime({
-                    targets: '#a',
-                    opacity: 0,
-                    duration: 500,
-                    easing: 'easeInOutSine',
-                    changeComplete: function(anim) {
-                        $('.grading-card')[0].style.display = 'none';
-                        $('.grading-card')[1].style.display = 'flex';
-                        anime({
-                            targets: '#b',
-                            opacity: 1,
-                            duration: 500,
-                            easing: 'easeInOutSine',
-                        });
-                    }
-                });
+                gradingCardAnimation('#a', '#b', 0, 1)
             }
             else {
-                anime({
-                    targets: '#b',
-                    opacity: 0,
-                    duration: 500,
-                    easing: 'easeInOutSine',
-                    changeComplete: function(anim) {
-                        $('.grading-card')[0].style.display = 'flex';
-                        $('.grading-card')[1].style.display = 'none';
-                        anime({
-                            targets: '#a',
-                            opacity: 1,
-                            duration: 500,
-                            easing: 'easeInOutSine',
-                        });
-                    }
-                });
+                gradingCardAnimation('#b', '#a', 1, 0);
             }
         
         });
@@ -94,6 +64,26 @@ $(document).ready(function() {
 
 
     //HELPER FUNCTIONS
+
+    //reusable template for playing grading card animation from a start card to an end card
+    function gradingCardAnimation(startingTargetId, endingTargetId, startingTargetIndex, endingTargetIndex) {
+        anime({
+            targets: startingTargetId,
+            opacity: 0,
+            duration: 500,
+            easing: 'easeInOutSine',
+            changeComplete: function(anim) {
+                $('.grading-card')[startingTargetIndex].style.display = 'none';
+                $('.grading-card')[endingTargetIndex].style.display = 'flex';
+                anime({
+                    targets: endingTargetId,
+                    opacity: 1,
+                    duration: 500,
+                    easing: 'easeInOutSine',
+                });
+            }
+        });
+    }
 
     //create scene using animejs fade
     function addFadeInScrollMagic(section, target) {
