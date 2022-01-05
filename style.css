@@ -45,21 +45,22 @@ nav h5 {
 
 /* STAT SECTIONS */
 
+#main {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
 .stat {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   height: 100vh;
 
   padding: 0 256px;
-}
 
-.stat .inner {
-  display: flex;
-  justify-content: space-between;
-
-  width: 100%;
+  scroll-snap-align: start;
 }
 
 .stat .left {
@@ -101,6 +102,8 @@ nav h5 {
 
 .map {
   height: 100vh;
+
+  scroll-snap-align: start;
 }
 
 .map .inner {
@@ -187,6 +190,8 @@ nav h5 {
 /* FINAL CTA SECTION */
 .cta {
   height: 100vh;
+
+  scroll-snap-align: start;
 }
 
 .cta .inner {
