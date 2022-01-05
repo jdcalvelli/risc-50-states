@@ -7,7 +7,18 @@ import './style.css';
 
 $(document).ready(function() {
 
-   
+    //add animation for back button
+    $('.back-arrow').on('click', function() {
+        anime({
+            targets: "nav",
+            translateX: -256,
+            duration: 750,
+            easing: 'easeInOutSine',
+            complete: (anim) => {
+              window.location.replace("https://risc.uchicago.edu");
+            },
+          });
+    });
     
     //scrollmagic controller and scenes addition
     const controller = new ScrollMagic.Controller();
