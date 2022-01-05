@@ -12,12 +12,12 @@ $(document).ready(function() {
     //scrollmagic controller and scenes addition
     const controller = new ScrollMagic.Controller();
 
-    addFadeInScrollMagic(1, '.fa-globe-americas')
-    addFadeInScrollMagic(2, '.fa-chart-area');
-    addFadeInScrollMagic(3, '.fa-lightbulb');
-    addFadeInScrollMagic(4, '.fa-graduation-cap');
-    addFadeInScrollMagic(5, '.fa-flag-usa');
-    addFadeInScrollMagic(6, '#risc-logo');
+    addFadeInScrollMagic(1, '#risc-logo');
+    addFadeInScrollMagic(4, '.fa-globe-americas')
+    addFadeInScrollMagic(5, '.fa-chart-area');
+    addFadeInScrollMagic(6, '.fa-lightbulb');
+    addFadeInScrollMagic(7, '.fa-graduation-cap');
+    addFadeInScrollMagic(8, '.fa-flag-usa');
 
 
 
