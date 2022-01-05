@@ -60,7 +60,7 @@ nav h5 {
 
   padding: 0 256px;
 
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 .stat .left {
@@ -103,7 +103,7 @@ nav h5 {
 .map {
   height: 100vh;
 
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 .map .inner {
@@ -191,7 +191,7 @@ nav h5 {
 .cta {
   height: 100vh;
 
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 .cta .inner {
