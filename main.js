@@ -39,6 +39,46 @@ $(document).ready(function() {
                 duration: 200,
                 easing: 'easeInOutSine',
             });
+        })
+        .on('click', function() {
+            
+            if ($(this).hasClass('fa-angle-right')) {
+                anime({
+                    targets: '#a',
+                    opacity: 0,
+                    duration: 500,
+                    easing: 'easeInOutSine',
+                    changeComplete: function(anim) {
+                        $('.grading-card')[0].style.display = 'none';
+                        $('.grading-card')[1].style.display = 'flex';
+                        anime({
+                            targets: '#b',
+                            opacity: 1,
+                            duration: 500,
+                            easing: 'easeInOutSine',
+                        });
+                    }
+                });
+            }
+            else {
+                anime({
+                    targets: '#b',
+                    opacity: 0,
+                    duration: 500,
+                    easing: 'easeInOutSine',
+                    changeComplete: function(anim) {
+                        $('.grading-card')[0].style.display = 'flex';
+                        $('.grading-card')[1].style.display = 'none';
+                        anime({
+                            targets: '#a',
+                            opacity: 1,
+                            duration: 500,
+                            easing: 'easeInOutSine',
+                        });
+                    }
+                });
+            }
+        
         });
 
     //scrollmagic controller and scenes addition
