@@ -31,7 +31,9 @@ state_grades_simplified_shp <- inner_join(states_shp, state_grades_simplified)
 
 #adding bins and color palette
 bins <- as.numeric(as.factor(c("F", "D-", "D", "D+", "C-", "C", "C+", "B-", "B", "B+", "A-", "A", "A+")))
-pal <- colorBin(c('green', 'yellow', 'red'), domain = state_grades_simplified_shp$Final.Grade.Factor, bins = bins)
+pal <- colorBin(c( '#98b01e', '#b09d1e', '#b0621e', '#b03b1e', '#b01e1e'), 
+                domain = state_grades_simplified_shp$Final.Grade.Factor, 
+                bins = bins)
 
 #creating labels
 popups <- sprintf(
