@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(leaflet)
+library(leaflet.extras)
 library(sf)
 library(htmltools)
 
@@ -53,7 +54,15 @@ leaf <- leaflet(state_grades_simplified_shp,
                   minZoom = 2,
                 )) %>%
   setView(-96, 37.8, 4) %>%
-  addProviderTiles(providers$Stamen.Toner) #add basemap tiles
+  #add basemap tiles
+  addProviderTiles(providers$Stamen.Toner) %>%
+  #adding suspendScroll
+  suspendScroll(
+    wakeTime = 200,
+    sleepTime = 400,
+    hoverToWake = TRUE,
+    sleepNote = FALSE
+  )
 
 #adding polygons
 leaf %>% addPolygons(
