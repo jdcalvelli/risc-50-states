@@ -5,6 +5,9 @@ import ScrollMagic from 'scrollmagic';
 import '/node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 import './style.css';
 
+let gradingCardIndex = 0;
+console.log(gradingCardIndex);
+
 $(document).ready(function() {
 
     //add animation and events for back button
@@ -42,13 +45,65 @@ $(document).ready(function() {
         })
         .on('click', function() {
 
-            if ($(this).hasClass('fa-angle-right')) {
-                gradingCardAnimation('#a', '#b', 0, 1)
+            switch (gradingCardIndex) {
+                case 0:
+                    if ($(this).hasClass('fa-angle-right')) {
+                        gradingCardAnimation('#a', '#b', 0, 1)                
+                        gradingCardIndex++;
+                        console.log(gradingCardIndex);
+                    }
+                    break;
+            
+                case 1:
+                    if ($(this).hasClass('fa-angle-right')) {
+                        gradingCardAnimation('#b', '#c', 1, 2);
+                        gradingCardIndex++;
+                        console.log(gradingCardIndex);
+                    }
+                    else {
+                        gradingCardAnimation('#b', '#a', 1, 0);
+                        gradingCardIndex--;
+                        console.log(gradingCardIndex);
+                    }
+                    break;
+
+                case 2:
+                    if ($(this).hasClass('fa-angle-right')) {
+                        gradingCardAnimation('#c', '#d', 2, 3);
+                        gradingCardIndex++;
+                        console.log(gradingCardIndex);
+                    }
+                    else {
+                        gradingCardAnimation('#c', '#b', 2, 1);
+                        gradingCardIndex--;
+                        console.log(gradingCardIndex);
+                    }
+                    break;
+                    
+                case 3:
+                    if ($(this).hasClass('fa-angle-right')) {
+                        gradingCardAnimation('#d', '#f', 3, 4);
+                        gradingCardIndex++;
+                        console.log(gradingCardIndex);
+                    }
+                    else {
+                        gradingCardAnimation('#d', '#c', 3, 2);
+                        gradingCardIndex--;
+                        console.log(gradingCardIndex);
+                    }
+                    break;
+
+                case 4:
+                    if ($(this).hasClass('fa-angle-left')) {
+                        gradingCardAnimation('#f', '#d', 4, 3);
+                        gradingCardIndex--;
+                        console.log(gradingCardIndex);
+                    }
+                    break;
+
+                default:
+                    break;
             }
-            else {
-                gradingCardAnimation('#b', '#a', 1, 0);
-            }
-        
         });
 
     //scrollmagic controller and scenes addition
