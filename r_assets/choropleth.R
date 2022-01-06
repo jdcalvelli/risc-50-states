@@ -50,7 +50,7 @@ popups <- sprintf(
 leaf <- leaflet(state_grades_simplified_shp, 
                 options = leafletOptions(
                   maxZoom = 7,
-                  minZoom = 4
+                  minZoom = 2,
                 )) %>%
   setView(-96, 37.8, 4) %>%
   addProviderTiles(providers$Stamen.Toner) #add basemap tiles
