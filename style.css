@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
 
 :root {
-  --main_text_color: black;
-  --sub_text_color: #899499;
+  --main_text_color: #000102;
+  --sub_text_color: #949598;
+  --accent_color: #FC4512;
 }
 
 * {
@@ -13,7 +14,7 @@
 
 body {
   color: var(--main_text_color);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 /* NAV SECTION */
@@ -33,7 +34,7 @@ nav {
 
 .back-arrow {
   margin-right: 24px;
-  color: var(--main);
+  color: var(--main_text_color);
 
   cursor: pointer;
 }
@@ -119,7 +120,7 @@ nav h5 {
   height: 70%;
   width: 70%;
 
-  border: 5px solid black;
+  border: 5px solid var(--accent_color);
   border-radius: 16px;
 }
 
@@ -178,7 +179,6 @@ nav h5 {
   margin-bottom: 8px;
 
   font-weight: 300;
-  letter-spacing: 0.1em;
 }
 
 #a {
@@ -329,7 +329,7 @@ nav h5 {
 }
 
 .end-text a {
-  color: var(--main_text_color);
+  color: var(--accent_color);
   text-decoration: none;
 }
 
@@ -339,7 +339,7 @@ nav h5 {
 }
 
 .end-text h3 {
-  color: var(--sub_text_color);
+  color: var(--main_text_color);
   font-weight: 300;
   font-style: italic;
 
@@ -348,12 +348,15 @@ nav h5 {
 
 .end-text h5 {
   color: var(--sub_text_color);
-  opacity: 0.6;
 
   font-weight: 300;
   font-style: italic;
 
   letter-spacing: 0.1em;
+}
+
+.end-text h5 a {
+  color: var(--sub_text_color);
 }
 
 /* IMAGE OPTIONS */
