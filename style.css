@@ -59,7 +59,8 @@ nav h5 {
 
   height: 100vh;
 
-  padding: 0 256px;
+  /* padding: 0 256px; */
+  padding: 0 15%;
 
   scroll-snap-align: center;
 }
@@ -243,7 +244,6 @@ nav h5 {
   
   height: 70%;
 
-  padding: 0 128px;
   padding-top: 32px;
 }
 
@@ -378,4 +378,85 @@ nav h5 {
   font-size: 8em;
 
   opacity: 0;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+  
+  .stat {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stat .left {
+    width: 75%;
+
+    margin-top: 48px;
+
+    font-size: 0.8em;
+  }
+
+  .stat .left h3 {
+    padding: 0;
+  }
+
+  .stat .right {
+    width: 75%;
+  }
+
+  .why {
+    font-size: 0.8em;
+  }
+
+  .why .top {
+    margin-bottom: 16px;
+  }
+
+  .why .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    height: 50%;
+  
+    padding-top: 0;
+
+    overflow: scroll;
+  }
+
+  .why .bottom .why-card {
+    width: 75%;
+  }
+
+  .why .bottom .why-card:nth-of-type(2) {
+    padding-left: 0;
+  }
+
+  .why .bottom .why-card:nth-of-type(3) {
+    padding-left: 0;
+  }
+
+  .why .bottom .why-card:nth-of-type(4) {
+    padding-left: 0;
+  }
+
+  .why .bottom .why-card:nth-of-type(5) {
+    padding-left: 0;
+  }
+
+  .why .bottom .why-card .fas {
+    font-size: 1.5em;
+  }
+
+  .why .bottom .why-card h5:nth-of-type(1) {
+    padding-left: 24px;
+  }
+
+  .why .bottom .why-card h5:nth-of-type(2) {
+    padding-left: 48px;
+  }
 }
