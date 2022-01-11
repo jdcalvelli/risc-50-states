@@ -6,7 +6,6 @@ import '/node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 import './style.css';
 
 let gradingCardIndex = 0;
-console.log(gradingCardIndex);
 
 $(document).ready(function() {
 
@@ -109,14 +108,52 @@ $(document).ready(function() {
     //scrollmagic controller and scenes addition
     const controller = new ScrollMagic.Controller();
 
-    addFadeInScrollMagic(1, '#risc-logo');
-    addFadeInScrollMagic(4, '.fa-globe-americas')
-    addFadeInScrollMagic(5, '.fa-chart-area');
-    addFadeInScrollMagic(6, '.fa-lightbulb');
-    addFadeInScrollMagic(7, '.fa-graduation-cap');
-    addFadeInScrollMagic(8, '.fa-flag-usa');
+    new ScrollMagic.Scene({
+        triggerElement: `.stat:nth-of-type(1)`,
+        triggerHook: 'onCenter',
+    })
+    .on('enter', () => {
+        anime({
+            targets: '#risc-logo',
+            opacity: 1,
+            duration: 2000,
+            easing: 'easeInOutSine',
+          });
+    })
+    .addTo(controller);
 
-
+    new ScrollMagic.Scene({
+        triggerElement: '.why',
+        triggerHook: 'onCenter',
+    })
+    .on('enter', () => {
+        let whyTimeline = anime.timeline({
+            easing: 'easeInOutSine',
+            duration: 2000
+        })   
+        whyTimeline
+            .add({
+                targets: '.fa-globe-americas',
+                opacity: 1,
+            })
+            .add({
+                targets: '.fa-chart-area',
+                opacity: 1,
+            })
+            .add({
+                targets: '.fa-lightbulb',
+                opacity: 1,
+            })
+            .add({
+                targets: '.fa-graduation-cap',
+                opacity: 1,
+            })
+            .add({
+                targets: '.fa-flag-usa',
+                opacity: 1,
+            });
+    })
+    .addTo(controller);
 
     //HELPER FUNCTIONS
 
@@ -138,23 +175,6 @@ $(document).ready(function() {
                 });
             }
         });
-    }
-
-    //create scene using animejs fade
-    function addFadeInScrollMagic(section, target) {
-        new ScrollMagic.Scene({
-            triggerElement: `.stat:nth-of-type(${section})`,
-            triggerHook: 'onCenter',
-        })
-        .on('enter', () => {
-            anime({
-                targets: target,
-                opacity: 1,
-                duration: 2000,
-                easing: 'easeInOutSine',
-              });
-        })
-        .addTo(controller);
     }
 
 });
