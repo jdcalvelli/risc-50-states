@@ -151,7 +151,7 @@ nav h5 {
   justify-content: center;
   align-items: center;
 
-  border: 3px solid black;
+  border: 3px solid var(--sub_text_color);
   border-radius: 16px;
 
   padding: 8px;
@@ -163,6 +163,8 @@ nav h5 {
   height: 20%;
 
   font-size: 1.2em;
+
+  color: var(--accent_color);
 }
 
 .grading-card ul {
@@ -179,6 +181,8 @@ nav h5 {
   margin-bottom: 8px;
 
   font-weight: 300;
+
+  color: var(--main_text_color);
 }
 
 #a {
