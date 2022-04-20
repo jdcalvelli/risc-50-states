@@ -1,6 +1,20 @@
-import './style.css'
+//import './style.css'
+import m from "mithril";
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+import { Nav } from "./components/nav";
+import { Header } from "./components/header"
+import { Map } from "./components/map"
+
+let root = document.body;
+
+const App = {
+  view: function() {
+    return m('div', {class: 'app'}, [
+      m(Nav),
+      m(Header),
+      m(Map)
+    ])
+  }
+}
+
+m.mount(root, App);

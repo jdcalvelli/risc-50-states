@@ -9,5 +9,10 @@
   },
   "devDependencies": {
     "vite": "^2.9.5"
+  },
+  "dependencies": {
+    "leaflet": "^1.8.0",
+    "leaflet-providers": "^1.13.0",
+    "mithril": "^2.0.4"
   }
 }
