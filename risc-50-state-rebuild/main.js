@@ -1,18 +1,18 @@
 import './style.css'
 import m from "mithril";
 
-import { Nav } from "./components/nav";
-import { Header } from "./components/header"
-import { Map } from "./components/map"
+import { NavComponent } from "./components/nav";
+import { HeaderComponent } from "./components/header"
+import { MapComponent } from "./components/map"
 
 let root = document.body;
 
 const App = {
   view: function() {
     return m('div', {class: 'app'}, [
-      m(Nav),
-      m(Header),
-      m(Map)
+      m(NavComponent),
+      m(HeaderComponent),
+      m(MapComponent)
     ])
   }
 }

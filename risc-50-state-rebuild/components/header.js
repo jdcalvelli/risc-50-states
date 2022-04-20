@@ -1,6 +1,6 @@
 import m from 'mithril';
 
-const Header = {
+const HeaderComponent = {
     view: function() {
         return m('div', {class: 'header'}, [
             m('h1', 'The National Data Literacy Snapshot'),
@@ -9,4 +9,4 @@ const Header = {
     }
 }
 
-export { Header }
+export { HeaderComponent }

@@ -1,6 +1,6 @@
 import m from 'mithril';
 
-const Nav = {
+const NavComponent = {
     view: function() {
         return m('div', {class: 'nav'}, [
             m('h3', 'Back to RISC')
@@ -8,4 +8,4 @@ const Nav = {
     }
 }
 
-export { Nav };
+export { NavComponent };
