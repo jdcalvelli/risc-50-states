@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "leaflet": "^1.8.0",
-    "leaflet-providers": "^1.13.0",
-    "mithril": "^2.0.4"
+    "leaflet-draw": "^1.0.4",
+    "mithril": "^2.0.4",
+    "mithril-leaflet": "^0.4.3"
   }
 }
