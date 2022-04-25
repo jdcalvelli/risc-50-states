@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
 import { StateInfo } from "./StateInfo";
@@ -10,6 +10,10 @@ import { loadData } from "../tasks/loadData";
 // css moved to in the container declaration, out of css file
 
 function MapSection(props) {
+
+    //need state to track which state we're talking about, then pass the state into the stateinfo object as prop
+    const [stateName, setStateName] = useState('TEST STATE NAME')
+    const [stateAnalysis, setStateAnalysis] = useState('TEST STATE ANALYSIS')
 
     //basic styling of each geojson object drawn
     //place in GeoJSON component using style prop
@@ -42,7 +46,10 @@ function MapSection(props) {
             </MapContainer>
 
             {/* implementation of state info section */}
-            <StateInfo/>
+            <StateInfo 
+                name={stateName}
+                analysis={stateAnalysis}
+            />
         </div>
     )
 }

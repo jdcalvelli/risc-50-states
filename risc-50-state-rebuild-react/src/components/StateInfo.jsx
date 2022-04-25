@@ -7,10 +7,10 @@ import React from "react";
 function StateInfo(props) {
     return (
         <div className="stateInfo">
-            <h3>state name: state name will go here </h3>
+            <h3>state name: {props.name} </h3>
 
             <h5>analysis: </h5>
-            <p>this is where analysis will go</p>
+            <p>{props.analysis}</p>
 
             <p>see current math standards here - link</p>
             <p>see current computer science standards here - link</p>
