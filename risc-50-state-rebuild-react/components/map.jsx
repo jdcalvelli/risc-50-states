@@ -1,7 +1,9 @@
-import React from "react";
-import { MapContainer, TileLayer, useMap } from 'react-leaflet';
+import React, { useEffect } from "react";
+import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
 import { StateInfo } from "./StateInfo";
+
+import { features } from '../src/assets/us-states.json'
 
 //this will be the leaflet map - which will need state i believe?
 //has to be functional component - meaning the state will have to be lifted from here
@@ -18,6 +20,7 @@ function MapSection(props) {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
+                <GeoJSON data={features} />
             </MapContainer>
 
             {/* implementation of state info section */}
