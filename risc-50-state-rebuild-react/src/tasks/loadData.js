@@ -1,20 +1,13 @@
-// helper script for loading in and combining data to be displayed on map
+// helper script for loading in pre-combined data
 
-import { papa } from 'papaparse'
-import { features } from '../assets/us-states.json'
-
-    //WHAT DO I NEED TO DO
-    //1 load in geojson
-    //2 load and parse csv
-    //3 join the two together
-    //4 display the grade with a click of mouse on state
-    //5 change color of map based on csv data
+import Papa from 'papaparse'
+import { features } from '../assets/RJoinedGeoJSON.json'
 
 function loadData() {
-    let geoBase = features;
-    //let reportCard = Papa.parse()
+    //load in geojson and load/parse csv
+    let joinedData = features;
 
-    return geoBase;
+    return joinedData;
 }
 
 export { loadData }

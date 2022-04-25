@@ -21,7 +21,7 @@ function MapSection(props) {
 
     const onEachState = (state, layer) => {
         //called when each geojson object is drawn, can be used to set options like color!
-        layer.bindPopup(`test`)
+        layer.bindPopup(`${state.properties['Final Grade']}`)
     }
 
     return (
