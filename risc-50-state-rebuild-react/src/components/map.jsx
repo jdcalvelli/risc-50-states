@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
 import { StateInfo } from "./StateInfo";
 
-import { features } from '../src/assets/us-states.json'
+import { features } from '../assets/us-states.json'
 
 //this will be the leaflet map - which will need state i believe?
 //has to be functional component - meaning the state will have to be lifted from here

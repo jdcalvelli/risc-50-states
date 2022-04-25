@@ -5,8 +5,8 @@ import { createRoot } from "react-dom/client";
 import 'leaflet/dist/leaflet.css'
 import './style.css'
 
-import { Heading } from "../components/heading";
-import { MapSection } from "../components/map";
+import { Heading } from "./components/heading";
+import { MapSection } from "./components/map";
 
 const rootElement = document.querySelector("#root");
 const root = createRoot(rootElement);
