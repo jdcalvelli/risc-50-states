@@ -3,13 +3,27 @@ import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
 import { StateInfo } from "./StateInfo";
 
-import { features } from '../assets/us-states.json'
+import { loadData } from "../tasks/loadData";
 
 //this will be the leaflet map - which will need state i believe?
 //has to be functional component - meaning the state will have to be lifted from here
 // css moved to in the container declaration, out of css file
 
 function MapSection(props) {
+
+    //basic styling of each geojson object drawn
+    //place in GeoJSON component using style prop
+    // const geoMapStyle = {
+    //     fillColor: 'yellow',
+    //     weight: 1,
+    //     color: 'black',
+    // }
+
+    const onEachState = (state, layer) => {
+        //called when each geojson object is drawn, can be used to set options like color!
+        layer.bindPopup(`test`)
+    }
+
     return (
         <div className="mapSection">
 
@@ -20,7 +34,11 @@ function MapSection(props) {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
-                <GeoJSON data={features} />
+                {/* fix this part after adding the new data script */}
+                <GeoJSON 
+                    data={loadData()}  
+                    onEachFeature={onEachState}
+                />
             </MapContainer>
 
             {/* implementation of state info section */}
