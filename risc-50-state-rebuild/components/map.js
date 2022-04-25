@@ -6,24 +6,28 @@ import { LeafletMap } from 'mithril-leaflet';
 import m from 'mithril';
 
 const MapComponent = {
+    mapData: null,
+    oninit: function() {
+        return m.request('../assets/us-states.json')
+            .then(response => {
+                this.mapData = response
+                console.log(this.mapData)})
+    },
     view: function() {
         return m(LeafletMap, {
             style: 'height: 400px; margin-top: 20px;',
             view: L.latLng(37.8, -96),
             zoom: 4,
             baseLayers: {
-                osm: {
+                base: {
                     url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',
                     options: {
                         subdomains: ['a', 'b', 'c', 'd'],
                         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
                     }
-                }
+                },
             },
-            overlays: {
-                test: L.marker(L.latLng(37.8, -96))
-            },
-            visible: ['test']
+            
         })
     }
 }
