@@ -51,7 +51,12 @@ function MapSection(props) {
         <div className="mapSection">
 
             {/* actual drawing of leaflet map */}
-            <MapContainer style={{ height: 600, width: 900 }} center={[37.0902, -95.7129]} zoom={3}>
+            <MapContainer 
+                style={{ height: 600, width: 900 }} 
+                center={[37.0902, -95.7129]} 
+                zoom={3}
+                scrollWheelZoom={false}>
+                    
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
