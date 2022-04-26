@@ -1,4 +1,59 @@
-/* .leaflet-container {
-    height: 600px;
-    width: 900px;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --accent-text-color: #fc4512;
+}
+
+/* REACT APP ROOT */
+
+#root {
+
+    font-family: 'Nunito', sans-serif;
+
+    padding: 5%;
+}
+
+/* HEADING SECTION */
+
+.headingSection {
+    margin-bottom: 2rem;
+}
+
+.headingSection h1 {
+    margin-bottom: 1rem;
+
+    color: var(--accent-text-color);
+}
+
+/* MAP SECTION */
+
+.mapSection {
+    display: flex;
+    height: 60vh;
+    width: 100%;
+
+    margin-bottom: 2rem;
+}
+
+/* this is the actual leaflet map */
+.leaflet-container {
+    border: 3px solid var(--accent-text-color);
+    border-radius: 16px;
+
+    height: 100%;
+    width: 65%;
+}
+
+/* this is the right side where the information is */
+.stateInfo {
+    padding: 2.5%;
+
+    height: 100%;
+    width: 35%;
+}
+

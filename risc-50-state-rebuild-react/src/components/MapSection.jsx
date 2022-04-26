@@ -52,7 +52,6 @@ function MapSection(props) {
 
             {/* actual drawing of leaflet map */}
             <MapContainer 
-                style={{ height: 600, width: 900 }} 
                 center={[37.0902, -95.7129]} 
                 zoom={3}
                 scrollWheelZoom={false}>

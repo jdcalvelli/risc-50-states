@@ -4,10 +4,10 @@ import React from "react";
 
 function HeadingSection(props) {
     return (
-        <div className="heading">
+        <div className="headingSection">
             <h1>The National Data Literacy Snapshot</h1>
-            <h3>The Center for RISC researched and graded all 50 States to determine what they have done 
-                to promote data science education. How does your state compare? </h3>
+            <h3>The <span style={{color: '#fc4512'}}>Center for RISC</span> researched and graded all 50 States to determine what they have done 
+                to <span style={{color: '#fc4512'}}>promote data science education.</span> How does your state compare? </h3>
         </div>
     )
 }
