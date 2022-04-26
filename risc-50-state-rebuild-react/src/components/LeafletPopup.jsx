@@ -6,7 +6,7 @@ function LeafletPopup(props) {
     return(
         <div className="leafletPopup">
             <h3>{props.name}</h3>
-            <h1>{props.finalGrade}</h1>    
+            <h1 style={{textAlign: "center"}}>{props.finalGrade}</h1>    
         </div>
     )
 }
