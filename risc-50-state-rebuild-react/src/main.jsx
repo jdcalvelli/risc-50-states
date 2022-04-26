@@ -5,8 +5,8 @@ import { createRoot } from "react-dom/client";
 import 'leaflet/dist/leaflet.css'
 import './style.css'
 
-import { Heading } from "./components/heading";
-import { MapSection } from "./components/map";
+import { HeadingSection } from "./components/HeadingSection";
+import { MapSection } from "./components/MapSection";
 import { WhySection } from "./components/WhySection";
 import { HowSection } from "./components/HowSection"
 import { ClosingSection } from "./components/ClosingSection";
@@ -16,7 +16,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <Heading/>
+    <HeadingSection/>
     <MapSection/>
     <WhySection/>
     <HowSection/>
