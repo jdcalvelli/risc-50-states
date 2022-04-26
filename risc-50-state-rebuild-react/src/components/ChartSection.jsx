@@ -60,7 +60,7 @@ function ChartSection(props) {
                 ]}
             />
             
-            <p>**This rubric approximates the criteria needed to meet each grade. 
+            <p className="chartCaption">**This rubric approximates the criteria needed to meet each grade. 
                 States may not completely fit any one profile due to individual variation. 
                 Rubric does not include assessment of local districts. </p>
         

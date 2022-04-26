@@ -21,13 +21,17 @@
 /* HEADING SECTION */
 
 .headingSection {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .headingSection h1 {
     margin-bottom: 1rem;
 
     color: var(--accent-text-color);
+}
+
+.headingSection h3 {
+    padding-right: 40%;
 }
 
 /* MAP SECTION */
@@ -37,7 +41,7 @@
     height: 60vh;
     width: 100%;
 
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* this is the actual leaflet map */
@@ -57,3 +61,99 @@
     width: 35%;
 }
 
+/* WHY SECTION */
+
+.whySection {
+    padding-left: 5%;
+    padding-right: 20%;
+    margin-bottom: 3rem;
+}
+
+.whySection h3 {
+    color: var(--accent-text-color);
+    margin-bottom: 1.5rem;
+}
+
+.whySection p {
+    margin-bottom: 1rem;
+}
+
+/* HOW SECTION */
+
+.howSection {
+    padding-left: 5%;
+    padding-right: 20%;
+    margin-bottom: 3rem;
+}
+
+.howSection h3 {
+    color: var(--accent-text-color);
+    margin-bottom: 1.5rem;
+}
+
+.howSection .listSection {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+}
+
+.howSection .listSection ul {
+    margin: 2.5%;
+}
+
+/* CHART SECTION AND CHART ITEMS */
+
+.chartSection {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.chartItem {
+    display: flex;
+
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* this is left side with grade name */
+.chartItem .chartGradeName {
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 3rem;
+}
+
+.chartItem .chartGradeName h3 {
+    margin-left: 55%;
+}
+
+/* this is the right side with criteria */
+.chartItem .chartGradeCriteria {
+    width: 70%;
+}
+
+.chartItem .chartGradeCriteria ul li {
+    margin-bottom: 0.5rem;
+}
+
+.chartSection .chartCaption {
+    font-size: 0.7rem;
+    padding-left: 30%;
+    padding-right: 20%;
+}
+
+/* CLOSING SECTION */
+
+.closingSection {
+    margin-top: 5rem;
+    text-align: right;
+}
+
+.closingSection p {
+    margin-bottom: 1rem;
+
+    font-size: 1.2rem;
+}
