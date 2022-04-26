@@ -8,6 +8,8 @@ import './style.css'
 import { Heading } from "./components/heading";
 import { MapSection } from "./components/map";
 import { WhySection } from "./components/WhySection";
+import { HowSection } from "./components/HowSection"
+import { ClosingSection } from "./components/ClosingSection";
 
 const rootElement = document.querySelector("#root");
 const root = createRoot(rootElement);
@@ -17,5 +19,7 @@ root.render(
     <Heading/>
     <MapSection/>
     <WhySection/>
+    <HowSection/>
+    <ClosingSection/>
   </StrictMode>
 );
