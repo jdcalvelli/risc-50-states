@@ -8,28 +8,55 @@ function determineStateColor(property) {
         case 'A':
             //return a color
             return ({
-                color: '#d9ef8b'
+                fillColor: '#d9ef8b',
+                fillOpacity: 1,
+                weight: 2,
+                color: 'black',
             })
     
         case 'B':
             //return a yellow
-            return {color: '#fee08b'};
+            return ({
+                fillColor: '#fee08b',
+                fillOpacity: 1,
+                weight: 2,
+                color: 'black'
+            })
 
         case 'C':
             //return a return a yellowish red
-            return {color: '#f46d43'};
+            return ({
+                fillColor: '#f46d43',
+                fillOpacity: 1,
+                weight: 2,
+                color: 'black'
+            })
         
         case 'D':
             //return a red
-            return {color: '#d73027'};
-
+            return ({
+                fillColor: '#d73027',
+                fillOpacity: 1,
+                weight: 2,
+                color: 'black'
+            })
         case 'F':
             //return a deep red
-            return {color: '#a50026'};
+            return ({
+                fillColor: '#a50026',
+                fillOpacity: 1,
+                weight: 2,
+                color: 'black'
+            })
 
         default:
             //return grey for no data
-            return {color: '#808080'};
+            return ({
+                fillColor: '#808080',
+                fillOpacity: 1,
+                weight: 2,
+                color: 'black'
+            })
     }
 }
 

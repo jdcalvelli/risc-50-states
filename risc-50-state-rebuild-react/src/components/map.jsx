@@ -30,9 +30,6 @@ function MapSection(props) {
         //called when each geojson object is drawn, can be used to set options like color!
         layer.bindPopup(`${state.properties['Final Grade']}`)
 
-        //set layer color based on grade for visualization by calling the determineStateColor task
-        //layer.options.fillColor = determineStateColor(state.properties['Grade for Visualization'])
-
         //adding the click event listener, and having the state values change!
         layer.on('click', (event) => {
             console.log(state.properties['Final Grade'])
@@ -51,7 +48,7 @@ function MapSection(props) {
         <div className="mapSection">
 
             {/* actual drawing of leaflet map */}
-            <MapContainer style={{ height: 600, width: 900 }} center={[37.0902, -95.7129]} zoom={4}>
+            <MapContainer style={{ height: 600, width: 900 }} center={[37.0902, -95.7129]} zoom={3}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
