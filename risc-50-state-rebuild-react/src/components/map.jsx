@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 import { StateInfo } from "./StateInfo";
 
 import { loadData } from "../tasks/loadData";
+import { determineStateColor } from '../tasks/determineStateColor'
 
 //this will be the leaflet map - which will need state i believe?
 //has to be functional component - meaning the state will have to be lifted from here
@@ -21,15 +22,16 @@ function MapSection(props) {
 
     //basic styling of each geojson object drawn
     //place in GeoJSON component using style prop
-    // const geoMapStyle = {
-    //     fillColor: 'yellow',
-    //     weight: 1,
-    //     color: 'black',
-    // }
+    const geoMapStyle = function(state) {
+        return determineStateColor(state.properties['Grade for Visualization'])
+    }
 
     const onEachState = (state, layer) => {
         //called when each geojson object is drawn, can be used to set options like color!
         layer.bindPopup(`${state.properties['Final Grade']}`)
+
+        //set layer color based on grade for visualization by calling the determineStateColor task
+        //layer.options.fillColor = determineStateColor(state.properties['Grade for Visualization'])
 
         //adding the click event listener, and having the state values change!
         layer.on('click', (event) => {
@@ -41,6 +43,7 @@ function MapSection(props) {
             setCompSciStandardsLink(state.properties['CS Standards Link'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
             setStateCTELink(state.properties['CTE Hyperlink'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
             setStateNGSSStandardAdoption(state.properties['NGSS?']);
+
         })
     }
 
@@ -56,7 +59,8 @@ function MapSection(props) {
 
                 {/* fix this part after adding the new data script */}
                 <GeoJSON 
-                    data={loadData()}  
+                    data={loadData()} 
+                    style={geoMapStyle}
                     onEachFeature={onEachState}
                 />
             </MapContainer>
