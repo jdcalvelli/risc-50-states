@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+import ReactDOMServer from "react-dom/server";
+
 import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
 import { StateInfo } from "./StateInfo";
+import { LeafletPopup } from "./LeafletPopup";
 
 import { loadData } from "../tasks/loadData";
 import { determineStateColor } from '../tasks/determineStateColor'
@@ -27,20 +31,19 @@ function MapSection(props) {
     }
 
     const onEachState = (state, layer) => {
-        //called when each geojson object is drawn, can be used to set options like color!
-        layer.bindPopup(`${state.properties['Final Grade']}`)
+        //popup per layer that shows name and final grade
+        //layer.bindPopup(`<h3>${state.properties.name}</h3> <br> <h1>${state.properties['Final Grade']}</h1>`)
+        layer.bindPopup(ReactDOMServer.renderToString(<LeafletPopup name={state.properties.name} finalGrade={state.properties['Final Grade']}/>))
 
         //adding the click event listener, and having the state values change!
         layer.on('click', (event) => {
-            console.log(state.properties['Final Grade'])
-
+            //state update
             setStateName(state.properties.name);
             setStateAnalysis(state.properties['Reasoning (Presentable)']);
             setMathStandardsLink(state.properties['Math Standards Link']);
             setCompSciStandardsLink(state.properties['CS Standards Link'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
             setStateCTELink(state.properties['CTE Hyperlink'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
             setStateNGSSStandardAdoption(state.properties['NGSS?']);
-
         })
     }
 
