@@ -12,8 +12,12 @@ import { loadData } from "../tasks/loadData";
 function MapSection(props) {
 
     //need state to track which state we're talking about, then pass the state into the stateinfo object as prop
-    const [stateName, setStateName] = useState('TEST STATE NAME')
-    const [stateAnalysis, setStateAnalysis] = useState('TEST STATE ANALYSIS')
+    const [stateName, setStateName] = useState('TEST STATE NAME');
+    const [stateAnalysis, setStateAnalysis] = useState('TEST STATE ANALYSIS');
+    const [stateMathStandardsLink, setMathStandardsLink] = useState('#');
+    const [stateCompSciStandardsLink, setCompSciStandardsLink] = useState('#');
+    const [stateCTELink, setStateCTELink] = useState('#')
+    const [stateNGSSStandardAdoption, setStateNGSSStandardAdoption] = useState('TEST NGSS')
 
     //basic styling of each geojson object drawn
     //place in GeoJSON component using style prop
@@ -26,6 +30,18 @@ function MapSection(props) {
     const onEachState = (state, layer) => {
         //called when each geojson object is drawn, can be used to set options like color!
         layer.bindPopup(`${state.properties['Final Grade']}`)
+
+        //adding the click event listener, and having the state values change!
+        layer.on('click', (event) => {
+            console.log(state.properties['Final Grade'])
+
+            setStateName(state.properties.name);
+            setStateAnalysis(state.properties['Reasoning (Presentable)']);
+            setMathStandardsLink(state.properties['Math Standards Link']);
+            setCompSciStandardsLink(state.properties['CS Standards Link'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
+            setStateCTELink(state.properties['CTE Hyperlink'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
+            setStateNGSSStandardAdoption(state.properties['NGSS?']);
+        })
     }
 
     return (
@@ -49,6 +65,10 @@ function MapSection(props) {
             <StateInfo 
                 name={stateName}
                 analysis={stateAnalysis}
+                mathStandardsLink={stateMathStandardsLink}
+                compSciStandardsLink={stateCompSciStandardsLink}
+                cteLink={stateCTELink}
+                ngssStandardAdoption={stateNGSSStandardAdoption}
             />
         </div>
     )

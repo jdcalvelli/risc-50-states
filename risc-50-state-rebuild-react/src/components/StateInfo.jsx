@@ -12,10 +12,10 @@ function StateInfo(props) {
             <h5>analysis: </h5>
             <p>{props.analysis}</p>
 
-            <p>see current math standards here - link</p>
-            <p>see current computer science standards here - link</p>
-            <p>see current career and tech ed sequence here - link</p>
-            <p>next general science standards adopted? </p>
+            <p>see current math standards <a href={props.mathStandardsLink}>here</a></p>
+            <p>see current computer science standards <a href={props.compSciStandardsLink}>here</a></p>
+            <p>see current career and tech ed sequence <a href={props.cteLink}>here</a></p>
+            <p>next general science standards adopted?: {props.ngssStandardAdoption}</p>
         </div>
     )
 }
