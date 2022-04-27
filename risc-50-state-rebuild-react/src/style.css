@@ -50,7 +50,7 @@
     border-radius: 16px;
 
     height: 100%;
-    width: 65%;
+    width: 60%;
 }
 
 /* this is the right side where the information is */
@@ -58,7 +58,16 @@
     padding: 2.5%;
 
     height: 100%;
-    width: 35%;
+    width: 40%;
+}
+
+.stateInfo .stateAnalysis {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stateInfo .stateNGSS {
+    margin-top: 1rem;
 }
 
 /* WHY SECTION */
@@ -149,7 +158,7 @@
 
 .closingSection {
     margin-top: 5rem;
-    text-align: right;
+    text-align: left;
 }
 
 .closingSection p {

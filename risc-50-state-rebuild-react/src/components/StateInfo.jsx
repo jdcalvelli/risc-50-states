@@ -7,15 +7,18 @@ import React from "react";
 function StateInfo(props) {
     return (
         <div className="stateInfo">
-            <h3>state name: {props.name} </h3>
+            <h1>{props.name}</h1>
 
-            <h5>analysis: </h5>
-            <p>{props.analysis}</p>
+            <div className="stateAnalysis">
+                <p>{props.analysis}</p>
+            </div>
 
-            <p>see current math standards <a href={props.mathStandardsLink}>here</a></p>
-            <p>see current computer science standards <a href={props.compSciStandardsLink}>here</a></p>
-            <p>see current career and tech ed sequence <a href={props.cteLink}>here</a></p>
-            <p>next general science standards adopted?: {props.ngssStandardAdoption}</p>
+            <p>See {props.name} <a href={props.mathStandardsLink}> Math Standards</a>, <a href={props.compSciStandardsLink}>Computer Science Standards</a>, and <a href={props.cteLink}>Career and Tech Education Sequence.</a></p>
+            
+            <div className="stateNGSS">
+                <p>Has {props.name} adopted Next General Science Standards (NGSS)?:</p>
+                <p>{props.ngssStandardAdoption}</p>
+            </div>
         </div>
     )
 }
