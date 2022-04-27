@@ -4,7 +4,7 @@ import React from "react";
 
 function LeafletPopup(props) {
     return(
-        <div className="leafletPopup">
+        <div style={{fontFamily: 'Nunito, sans-serif'}}>
             <h3>{props.name}</h3>
             <h1 style={{textAlign: "center"}}>{props.finalGrade}</h1>    
         </div>
