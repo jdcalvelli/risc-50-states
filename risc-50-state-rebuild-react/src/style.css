@@ -7,6 +7,7 @@
 
 :root {
     --accent-text-color: #fc4512;
+    --accent-grey: #808080;
 }
 
 /* REACT APP ROOT */
@@ -16,6 +17,18 @@
     font-family: 'Nunito', sans-serif;
 
     padding: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-grey);
+
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    color: var(--accent-text-color);
 }
 
 /* HEADING SECTION */
