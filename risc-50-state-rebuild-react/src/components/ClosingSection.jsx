@@ -5,8 +5,7 @@ import React from "react";
 function ClosingSection(props) {
     return(
         <div className="closingSection">
-            <p><span style={{fontWeight: 'bold'}}>See a bad grade for your state?</span> Take a look at our 
-            advocacy pack, and consider calling your state education department to find out more. </p>
+            <p><span style={{fontWeight: 'bold'}}>See a bad grade for your state?</span> Take a look at our <a href="https://docs.google.com/document/d/1GompsDPMiYgzp0dZ_0tYuXJKQFexkQXA3Cc3-Qflvus/edit?usp=sharing">advocacy pack</a>, and consider calling your state education department to find out more. </p>
 
             <p><span style={{fontWeight:'bold'}}>Did we miss something?</span> Disagree with our grade? 
             Get in touch with us at centerforrisc@gmail.com.</p>
