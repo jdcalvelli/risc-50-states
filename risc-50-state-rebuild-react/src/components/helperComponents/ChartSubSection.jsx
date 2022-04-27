@@ -2,7 +2,7 @@ import React from "react";
 
 import { ChartItem } from './ChartItem'
 
-function ChartSection(props) {
+function ChartSubSection(props) {
     return(
         <div className="chartSection">
             
@@ -68,4 +68,4 @@ function ChartSection(props) {
     )
 }
 
-export { ChartSection }
+export { ChartSubSection }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ChartSection } from './ChartSection'
+import { ChartSubSection } from './helperComponents/ChartSubSection'
 // stateless component
 
 function HowSection(props) {
@@ -36,7 +36,7 @@ function HowSection(props) {
                 grading rubric is copied below to give more detail.</p>
 
 
-            <ChartSection/>
+            <ChartSubSection/>
 
         </div>
     )

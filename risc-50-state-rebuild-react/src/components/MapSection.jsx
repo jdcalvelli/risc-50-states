@@ -4,9 +4,9 @@ import ReactDOMServer from "react-dom/server";
 
 import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
-import { StateInfo } from "./StateInfo";
-import { UseMapHelper } from "./UseMapHelper";
-import { LeafletPopup } from "./LeafletPopup";
+import { StateInfo } from "./helperComponents/StateInfo";
+import { UseMapHelper } from "./helperComponents/UseMapHelper";
+import { LeafletPopup } from "./helperComponents/LeafletPopup";
 
 import { loadData } from "../tasks/loadData";
 import { determineStateColor } from '../tasks/determineStateColor'
