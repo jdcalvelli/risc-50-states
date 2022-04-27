@@ -5,6 +5,7 @@ import ReactDOMServer from "react-dom/server";
 import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 
 import { StateInfo } from "./StateInfo";
+import { UseMapHelper } from "./UseMapHelper";
 import { LeafletPopup } from "./LeafletPopup";
 
 import { loadData } from "../tasks/loadData";
@@ -69,7 +70,10 @@ function MapSection(props) {
                 />
             </MapContainer>
 
-            {/* implementation of state info section */}
+
+            {/* if state is empty, display something like - click on the map to find out more, else show state info */}
+
+            {stateName == 'TEST STATE NAME' ? <UseMapHelper/> : 
             <StateInfo 
                 name={stateName}
                 analysis={stateAnalysis}
@@ -77,7 +81,7 @@ function MapSection(props) {
                 compSciStandardsLink={stateCompSciStandardsLink}
                 cteLink={stateCTELink}
                 ngssStandardAdoption={stateNGSSStandardAdoption}
-            />
+            />}
         </div>
     )
 }
