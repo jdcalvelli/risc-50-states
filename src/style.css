@@ -38,7 +38,7 @@ p {
 /* HEADING SECTION */
 
 .headingSection {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .headingSection h1 {
@@ -58,7 +58,7 @@ p {
     height: 75vh;
     width: 100%;
 
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 /* this is the actual leaflet map */
@@ -92,7 +92,7 @@ p {
 .whySection {
     padding-left: 5%;
     padding-right: 20%;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .whySection h3 {
@@ -109,7 +109,7 @@ p {
 .howSection {
     padding-left: 5%;
     padding-right: 20%;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .howSection h3 {
@@ -126,6 +126,49 @@ p {
 
 .howSection .listSection ul {
     margin: 2.5%;
+}
+
+.howSection .rubricShower {
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.howSection .rubricShower .rubricShowerInner {
+
+    height: 50px;
+    width: 200px;
+
+    border: 3px solid var(--accent-grey);
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: border;
+    transition-duration: 0.5s;
+}
+
+.howSection .rubricShower .rubricShowerInner:hover{
+    cursor: pointer;
+
+    border: 3px solid var(--accent-text-color)
+}
+
+.howSection .rubricShower .rubricShowerInner h3 {
+    margin-bottom: 0;
+
+    color: var(--accent-grey);
+
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.howSection .rubricShower .rubricShowerInner h3:hover {
+    color: var(--accent-text-color);
 }
 
 /* CHART SECTION AND CHART ITEMS */
