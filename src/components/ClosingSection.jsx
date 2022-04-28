@@ -10,9 +10,9 @@ function ClosingSection(props) {
             <p><span style={{fontWeight:'bold'}}>Did we miss something?</span> Disagree with our grade? 
             Get in touch with us at <a href="mailto:centerforrisc@gmail.com?subject=50 State Snapshot Feedback">centerforrisc@gmail.com.</a></p>
             
-            <p>This map is a work in progress, and we are trying our best to keep pace with all the momentum in the field. 
+            <p>This map is a work in progress, and we are trying our best to keep pace with all the momentum in the field. <br/>
                 Ultimately, this work is meant <span style={{fontWeight: 'bold'}}>to motivate more action, 
-                not to hurt feelings.</span> Many states are charging ahead – we hope they can use this work as a 
+                not to hurt feelings.</span> <br/> Many states are charging ahead – we hope they can use this work as a 
                 resource to do more. </p>
         </div>
     )
