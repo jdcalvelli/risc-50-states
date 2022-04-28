@@ -6,7 +6,7 @@ function RubricShower(props) {
     return (
         <div className="rubricShower" onClick={props.handleClick}>
             <div className="rubricShowerInner">
-                <h3>see the full rubric</h3>
+                <h3>{props.showHide} the full rubric</h3>
             </div>
         </div>
     )

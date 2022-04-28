@@ -42,7 +42,9 @@ function HowSection(props) {
                 grading rubric is copied below to give more detail.</p>
 
 
-            {displayRubric == false ? <RubricShower handleClick={() => setDisplayRubric(!displayRubric)}/> : <ChartSubSection/>}
+                <RubricShower showHide = {!displayRubric ? 'Show' : 'Hide'} handleClick={() => setDisplayRubric(!displayRubric)}/>
+
+            {displayRubric == true ? <ChartSubSection/> : null }
 
         </div>
     )
