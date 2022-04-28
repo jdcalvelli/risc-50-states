@@ -44,11 +44,17 @@ p {
 .headingSection h1 {
     margin-bottom: 1rem;
 
+    font-size: 3rem;
+
     color: var(--accent-text-color);
 }
 
 .headingSection h3 {
     padding-right: 40%;
+
+    font-size: 1.8rem;
+    font-style: italic;
+    letter-spacing: 0.1rem;
 }
 
 /* MAP SECTION */

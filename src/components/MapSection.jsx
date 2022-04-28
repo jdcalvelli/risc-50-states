@@ -54,7 +54,7 @@ function MapSection(props) {
             {/* actual drawing of leaflet map */}
             <MapContainer 
                 center={[37.0902, -95.7129]} 
-                zoom={3}
+                zoom={4}
                 scrollWheelZoom={false}>
                     
                 <TileLayer
