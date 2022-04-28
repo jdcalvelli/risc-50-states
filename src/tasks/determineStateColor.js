@@ -6,44 +6,44 @@ function determineStateColor(property) {
     
     switch (property) {
         case 'A':
-            //return a color
+            //return a royal blue
             return ({
-                fillColor: '#d9ef8b',
+                fillColor: '#2b83ba',
                 fillOpacity: 1,
                 weight: 2,
                 color: 'black',
             })
     
         case 'B':
-            //return a yellow
+            //return a green
             return ({
-                fillColor: '#fee08b',
+                fillColor: '#abdda4',
                 fillOpacity: 1,
                 weight: 2,
                 color: 'black'
             })
 
         case 'C':
-            //return a return a yellowish red
+            //return a yellow
             return ({
-                fillColor: '#f46d43',
+                fillColor: '#ffffbf',
                 fillOpacity: 1,
                 weight: 2,
                 color: 'black'
             })
         
         case 'D':
-            //return a red
+            //return an orange
             return ({
-                fillColor: '#d73027',
+                fillColor: '#fdae61',
                 fillOpacity: 1,
                 weight: 2,
                 color: 'black'
             })
         case 'F':
-            //return a deep red
+            //return a red
             return ({
-                fillColor: '#a50026',
+                fillColor: '#d7191c',
                 fillOpacity: 1,
                 weight: 2,
                 color: 'black'
