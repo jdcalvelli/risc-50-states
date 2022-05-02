@@ -33,6 +33,9 @@ joinedData <- geobase
 
 joinedData$features$properties <- inner_join(geobase$features$properties, reportcard, by = 'name')
 
+### REMOVE THE PUERTO RICO FEATURE
+joinedData$features <- joinedData$features[1:51,]
+
 ### OUTPUT GEOJSON FOR USE IN REACT
 outputJSON <- toJSON(joinedData)
 write(outputJSON, 'RJoinedGeoJSON.json')
