@@ -13,8 +13,10 @@ function StateInfo(props) {
                 <p>{props.analysis}</p>
             </div>
 
-            <p>See {props.name} <a href={props.mathStandardsLink}> Math Standards</a>, <a href={props.compSciStandardsLink}>Computer Science Standards</a>, and <a href={props.cteLink}>Career and Tech Education Sequence.</a></p>
-            
+            {/* check to see if the thing is N/A, if so don't display, but if not then display */}
+
+            <p>See {props.name} educational standards below:</p>
+            {props.mathStandardsLink == 'N/A' ? null : <p><a href={props.mathStandardsLink}>/ Math</a> {props.compSciStandardsLink == 'N/A' ? null :<a href={props.compSciStandardsLink}>/ Computer Science</a>} {props.cteLink == 'N/A' ? null : <a href={props.cteLink}>/ Career and Tech Education</a>}</p>}
             <div className="stateNGSS">
                 <p>Has {props.name} adopted Next General Science Standards (NGSS)?:</p>
                 <p>{props.ngssStandardAdoption}</p>

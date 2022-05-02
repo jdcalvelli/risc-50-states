@@ -44,8 +44,8 @@ function MapSection(props) {
             setStateGrade(state.properties['Grade for Visualization']);
             setStateAnalysis(state.properties['Reasoning (Presentable)']);
             setMathStandardsLink(state.properties['Math Standards Link']);
-            setCompSciStandardsLink(state.properties['CS Standards Link'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
-            setStateCTELink(state.properties['CTE Hyperlink'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
+            setCompSciStandardsLink(state.properties['CS Standards Link']);
+            setStateCTELink(state.properties['CTE Hyperlink']);
             setStateNGSSStandardAdoption(state.properties['NGSS?']);
         })
     }
