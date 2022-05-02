@@ -272,7 +272,7 @@ p {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     /* HEADING SECTION */
     .headingSection h3 {
         padding-right: 20%;
