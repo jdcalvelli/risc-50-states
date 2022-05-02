@@ -94,6 +94,28 @@ p {
     margin-top: 1rem;
 }
 
+/* DISTRIBUTION SECTION */
+.distributionSection {
+    padding-left: 5%;
+
+    margin-bottom: 5rem;
+}
+
+.distributionSection h1 {
+    font-size: 3rem;
+}
+
+.distributionSection h3 {
+    color: var(--accent-text-color);
+    margin-bottom: 1.5rem;
+}
+
+.distributionSection .breakdown {
+    display: flex;
+
+    gap: 6.5%;
+}
+
 /* WHY SECTION */
 
 .whySection {

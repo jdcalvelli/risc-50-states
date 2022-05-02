@@ -7,6 +7,7 @@ import './style.css'
 
 import { HeadingSection } from "./components/HeadingSection";
 import { MapSection } from "./components/MapSection";
+import { DistributionSection } from "./components/DistributionSection";
 import { WhySection } from "./components/WhySection";
 import { HowSection } from "./components/HowSection"
 import { ClosingSection } from "./components/ClosingSection";
@@ -18,6 +19,7 @@ root.render(
   <StrictMode>
     <HeadingSection/>
     <MapSection/>
+    <DistributionSection/>
     <WhySection/>
     <HowSection/>
     <ClosingSection/>
