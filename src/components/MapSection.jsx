@@ -19,6 +19,7 @@ function MapSection(props) {
 
     //need state to track which state we're talking about, then pass the state into the stateinfo object as prop
     const [stateName, setStateName] = useState('TEST STATE NAME');
+    const [stateGrade, setStateGrade] = useState('TEST GRADE');
     const [stateAnalysis, setStateAnalysis] = useState('TEST STATE ANALYSIS');
     const [stateMathStandardsLink, setMathStandardsLink] = useState('#');
     const [stateCompSciStandardsLink, setCompSciStandardsLink] = useState('#');
@@ -34,12 +35,13 @@ function MapSection(props) {
     const onEachState = (state, layer) => {
         //popup per layer that shows name and final grade
         //layer.bindPopup(`<h3>${state.properties.name}</h3> <br> <h1>${state.properties['Final Grade']}</h1>`)
-        layer.bindPopup(ReactDOMServer.renderToString(<LeafletPopup name={state.properties.name} finalGrade={state.properties['Final Grade']}/>))
+        layer.bindPopup(ReactDOMServer.renderToString(<LeafletPopup name={state.properties.name} finalGrade={state.properties['Grade for Visualization']}/>))
 
         //adding the click event listener, and having the state values change!
         layer.on('click', (event) => {
             //state update
             setStateName(state.properties.name);
+            setStateGrade(state.properties['Grade for Visualization']);
             setStateAnalysis(state.properties['Reasoning (Presentable)']);
             setMathStandardsLink(state.properties['Math Standards Link']);
             setCompSciStandardsLink(state.properties['CS Standards Link'] == 'N/A' ? "#" : state.properties['CS Standards Link']);
@@ -76,6 +78,7 @@ function MapSection(props) {
             {stateName == 'TEST STATE NAME' ? <UseMapHelper/> : 
             <StateInfo 
                 name={stateName}
+                grade={stateGrade}
                 analysis={stateAnalysis}
                 mathStandardsLink={stateMathStandardsLink}
                 compSciStandardsLink={stateCompSciStandardsLink}

@@ -7,7 +7,7 @@ import React from "react";
 function StateInfo(props) {
     return (
         <div className="stateInfo">
-            <h1>{props.name}</h1>
+            <h1>{props.name} - {props.grade}</h1>
 
             <div className="stateAnalysis">
                 <p>{props.analysis}</p>
