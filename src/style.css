@@ -121,7 +121,7 @@ p {
 .distributionSection .breakdown {
     display: flex;
 
-    gap: 6.5%;
+    gap: 10%;
 }
 
 /* WHY SECTION */
