@@ -6,8 +6,14 @@
 }
 
 :root {
+    --background-color: #121212;
+    --main-text-color: rgba(255, 255, 255, 0.85);
     --accent-text-color: #fc4512;
     --accent-grey: #808080;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 /* REACT APP ROOT */
@@ -17,6 +23,8 @@
     font-family: 'Nunito', sans-serif;
 
     padding: 5%;
+
+    color: var(--main-text-color);
 }
 
 a {
