@@ -261,7 +261,14 @@ p {
 
 .closingSection {
     margin-top: 5rem;
-    text-align: left;
+
+    padding-left: 5%;
+    padding-right: 20%;
+}
+
+.closingSection h3 {
+    color: var(--accent-text-color);
+    margin-bottom: 1.5rem;
 }
 
 .closingSection p {
