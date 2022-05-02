@@ -239,3 +239,39 @@ p {
 
     font-size: 1.2rem;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    /* HEADING SECTION */
+    .headingSection h3 {
+        padding-right: 20%;
+    }
+
+
+    /* MAP SECTION */
+    .mapSection{
+        flex-direction: column;
+        overflow: scroll;
+    }
+    .leaflet-container {
+        width: 90%;
+        height: 50%;
+    }
+    .stateInfo {
+        width: 90%;
+        height: 50%;
+    }
+
+    /* HOW SECTION */
+    .howSection .listSection ul li {
+        margin: 10% 0;
+    }
+
+    .howSection .chartSection .chartItem {
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+}
