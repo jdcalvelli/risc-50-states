@@ -304,6 +304,11 @@ p {
         margin-top: 1rem;
     }
 
+    /* DISTRIBUTION SECTION */
+    .distributionSection .breakdown {
+        gap: 5%;
+    }
+
     /* HOW SECTION */
     .howSection .listSection ul li {
         margin: 10% 0;
