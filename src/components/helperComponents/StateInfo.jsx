@@ -14,12 +14,16 @@ function StateInfo(props) {
             </div>
 
             {/* check to see if the thing is N/A, if so don't display, but if not then display */}
+            <div className="stateLinks">
+                <p>See {props.name} educational standards below:</p>
+                <p>Mathematics: <a href={props.mathStandardsLink}>[see standards here.]</a></p>
+                <p>Computer Science Standards: <a href={props.compSciStandardsLink}>[see standards here.]</a></p>
+                <p>Career and Technical Education: {props.cteLink == "no sequence." ? <span style={{color: '#808080'}}>no sequence.</span> : <a href={props.cteLink}>[see standards here.]</a>}</p>
+            </div>
 
-            <p>See {props.name} educational standards below:</p>
-            {props.mathStandardsLink == 'N/A' ? null : <p><a href={props.mathStandardsLink}>/ Math</a> {props.compSciStandardsLink == 'N/A' ? null :<a href={props.compSciStandardsLink}>/ Computer Science</a>} {props.cteLink == 'N/A' ? null : <a href={props.cteLink}>/ Career and Tech Education</a>}</p>}
             <div className="stateNGSS">
-                <p>Has {props.name} adopted Next General Science Standards (NGSS)?:</p>
-                <p>{props.ngssStandardAdoption}</p>
+                <p>Many states are adopting the Next Generation Science Standards (NGSS), which includes a learning practice in Data Analysis. Has {props.name} adopted NGSS?</p>
+                <p style={{color: '#808080'}}>{props.ngssStandardAdoption}</p>
             </div>
         </div>
     )
