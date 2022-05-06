@@ -1,4 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+/* gotham light font */
+@font-face {
+    font-family: Gotham Rounded;
+    src: url(./assets/fonts/gotham-rounded/GothamRounded-Light.otf) format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+/* gotham book font */
+@font-face {
+    font-family: Gotham Rounded;
+    src: url(./assets/fonts/gotham-rounded/GothamRounded-Book.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* gotham medium font */
+@font-face {
+    font-family: Gotham Rounded;
+    src: url(./assets/fonts/gotham-rounded/GothamRounded-Medium.otf) format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -20,7 +42,7 @@ body {
 
 #root {
 
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Gotham Rounded', sans-serif;
 
     padding: 5%;
 
