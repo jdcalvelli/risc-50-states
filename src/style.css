@@ -65,10 +65,24 @@ p {
     line-height: 1.8rem;
 }
 
+h1 {
+    font-weight: normal;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+p {
+    font-weight: lighter;
+}
+
 /* HEADING SECTION */
 
 .headingSection {
     margin-bottom: 5rem;
+
+    padding-left: 5%;
 }
 
 .headingSection h1 {
@@ -83,7 +97,8 @@ p {
     padding-right: 40%;
 
     font-size: 1.8rem;
-    font-style: italic;
+    font-weight: normal;
+
     letter-spacing: 0.1rem;
 }
 
@@ -113,6 +128,10 @@ p {
 
     height: 100%;
     width: 40%;
+}
+
+.stateInfo h1 {
+    color: var(--accent-text-color);
 }
 
 .stateInfo .stateAnalysis {
