@@ -1,14 +1,10 @@
 import React, {useState} from "react";
 
 import { ChartSubSection } from './helperComponents/ChartSubSection'
-import { RubricController } from './helperComponents/RubricController'
 
 // has state for display of rubric
 
 function HowSection(props) {
-
-    //setting state for display of rubric
-    const [displayRubric, setDisplayRubric] = useState(false);
 
     return (
         <div className="howSection">
@@ -42,9 +38,7 @@ function HowSection(props) {
                 grading rubric is copied below to give more detail.</p>
 
 
-                <RubricController showHide = {!displayRubric ? 'Show' : 'Hide'} handleClick={() => setDisplayRubric(!displayRubric)}/>
-
-            {displayRubric == true ? <ChartSubSection/> : null }
+            <ChartSubSection/>
 
         </div>
     )
