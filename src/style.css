@@ -85,15 +85,16 @@ p {
 /* NAVBAR SECTION */
 .navBarSection {
     display: flex;
+    align-items: center;
+
+    margin-bottom: 2rem;
+
+    padding-left: 2.25%;
 }
 
 .navBarSection img {
     height: 110px;
     width: 110px;
-}
-
-.navBarSection h3 {
-
 }
 
 /* HEADING SECTION */
