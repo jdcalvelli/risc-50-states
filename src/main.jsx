@@ -5,6 +5,7 @@ import { createRoot } from "react-dom/client";
 import 'leaflet/dist/leaflet.css'
 import './style.css'
 
+import { NavBarSection } from "./components/NavBarSection";
 import { HeadingSection } from "./components/HeadingSection";
 import { MapSection } from "./components/MapSection";
 import { DistributionSection } from "./components/DistributionSection";
@@ -17,6 +18,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
+    <NavBarSection/>
     <HeadingSection/>
     <MapSection/>
     <DistributionSection/>

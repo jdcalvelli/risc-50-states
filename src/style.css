@@ -49,6 +49,7 @@ span {
     font-family: 'Gotham Rounded', sans-serif;
 
     padding: 5%;
+    padding-top: 4px;
 
     color: var(--main-text-color);
 }
@@ -79,6 +80,20 @@ h3 {
 
 p {
     font-weight: lighter;
+}
+
+/* NAVBAR SECTION */
+.navBarSection {
+    display: flex;
+}
+
+.navBarSection img {
+    height: 110px;
+    width: 110px;
+}
+
+.navBarSection h3 {
+
 }
 
 /* HEADING SECTION */
@@ -332,6 +347,16 @@ p {
 /* MEDIA QUERIES */
 
 @media (max-width: 992px) {
+    /* NAVBAR SECTION */
+    .navBarSection {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navBarSection h3 {
+        display: none;
+    }
+    
     /* HEADING SECTION */
     .headingSection h3 {
         padding-right: 20%;
