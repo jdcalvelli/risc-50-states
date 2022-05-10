@@ -351,7 +351,7 @@ p {
     /* NAVBAR SECTION */
     .navBarSection {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .navBarSection h3 {
