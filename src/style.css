@@ -173,6 +173,7 @@ p {
 /* DISTRIBUTION SECTION */
 .distributionSection {
     padding-left: 5%;
+    padding-right: 20%;
 
     margin-bottom: 5rem;
 }
@@ -336,9 +337,6 @@ p {
     .stateInfo h1 {
         margin-top: 1rem;
     }
-
-    /* DISTRIBUTION SECTION */
-    
 
     /* HOW SECTION */
     .howSection .listSection ul li {
