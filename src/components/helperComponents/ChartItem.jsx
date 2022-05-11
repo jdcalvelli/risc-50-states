@@ -14,7 +14,7 @@ function ChartItem(props) {
                 <ul>
                     {props.chartGradeCriteriaArray.map(item => {
                         return (
-                            <li>{item}</li>
+                            <li key={item}>{item}</li>
                         )
                     })}
                 </ul>
