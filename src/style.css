@@ -89,12 +89,13 @@ p {
 
     justify-content: space-between;
 
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .navBarSection img {
-    height: 110px;
-    width: 110px;
+    height: 50px;
+    width: 50px;
 }
 
 .navBarSection a {
