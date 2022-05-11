@@ -14,6 +14,7 @@ import { DistributionSection } from "./components/DistributionSection";
 import { WhySection } from "./components/WhySection";
 import { HowSection } from "./components/HowSection"
 import { ClosingSection } from "./components/ClosingSection";
+import { FooterSection } from "./components/FooterSection";
 
 const loadedData = loadData();
 
@@ -29,5 +30,6 @@ root.render(
     <WhySection/>
     <HowSection/>
     <ClosingSection/>
+    <FooterSection/>
   </StrictMode>
 );

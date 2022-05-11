@@ -90,7 +90,7 @@ p {
     justify-content: space-between;
 
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .navBarSection img {
@@ -286,6 +286,7 @@ p {
 
 .closingSection {
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .closingSection h3 {
@@ -298,6 +299,19 @@ p {
 
     font-size: 1.2rem;
 }
+
+/* FOOTER SECTION */
+
+.footerSection {
+    text-align: center;
+
+    font-size: 0.8rem;
+    font-style: italic;
+
+    color: var(--accent-grey);
+}
+
+
 
 /* MEDIA QUERIES */
 
