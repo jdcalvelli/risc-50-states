@@ -100,7 +100,7 @@ p {
 }
 
 .navBarSection a {
-    color: #121212;
+    color: var(--main-text-color);
     font-weight: lighter;
 }
 
