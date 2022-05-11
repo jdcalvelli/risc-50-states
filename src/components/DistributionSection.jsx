@@ -4,6 +4,9 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 import { Bar } from 'react-chartjs-2';
 
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.register(ChartDataLabels)
+
 import { determineChartNameColor } from "../tasks/determineChartNameColor";
 
 //display for grade counts
@@ -61,7 +64,8 @@ function DistributionSection(props) {
                             grid: {
                                 display: false,
                                 drawBorder: false,
-                            }
+                            },
+                            grace: '50%',
                         },
                         x: {
                             grid: {
@@ -72,6 +76,10 @@ function DistributionSection(props) {
                     plugins: {
                         legend: {
                             display: false,
+                        },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'end',
                         }
                     }
                 }} 
