@@ -4,6 +4,8 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 import { Bar } from 'react-chartjs-2';
 
+import { determineChartNameColor } from "../tasks/determineChartNameColor";
+
 //display for grade counts
 
 function DistributionSection(props) {
@@ -47,13 +49,25 @@ function DistributionSection(props) {
 
             <Bar 
                 options={{
+                    plugins: {
+                        legend: {
+                            display: false,
+                        }
+                    }
                 }} 
                 data={{
                     labels: ['A', 'B', 'C', 'D', 'F'],
                     datasets: [
                         {
-                            label: 'test example',
-                            data: distributionReducer(props.loadedData)
+                            label: 'Number of States',
+                            data: distributionReducer(props.loadedData),
+                            backgroundColor: [
+                                determineChartNameColor('A'), 
+                                determineChartNameColor('B'), 
+                                determineChartNameColor('C'),
+                                determineChartNameColor('D'),
+                                determineChartNameColor('F')
+                            ]
                         }
                     ],
                 }}
