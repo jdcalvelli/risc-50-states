@@ -10,6 +10,10 @@ import { determineChartNameColor } from "../tasks/determineChartNameColor";
 
 function DistributionSection(props) {
     
+    //changing font values for bar graph
+    Chart.defaults.font.size = 16
+    Chart.defaults.font.family = 'Gotham Rounded'
+
     const distributionReducer = (loadedData) => {
         const outputArray = [0, 0, 0, 0, 0];
 
