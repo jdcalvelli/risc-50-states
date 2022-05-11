@@ -48,7 +48,7 @@ span {
 
     font-family: 'Gotham Rounded', sans-serif;
 
-    padding: 5%;
+    padding: 5% 10%;
     padding-top: 4px;
 
     color: var(--main-text-color);
@@ -90,8 +90,6 @@ p {
     justify-content: space-between;
 
     margin-bottom: 2rem;
-
-    padding-left: 2.25%;
 }
 
 .navBarSection img {
@@ -108,8 +106,6 @@ p {
 
 .headingSection {
     margin-bottom: 5rem;
-
-    padding-left: 5%;
 }
 
 .headingSection h1 {
@@ -134,8 +130,6 @@ p {
 .mapSection {
     display: flex;
     height: 550px;
-
-    padding-left: 5%;
 
     margin-bottom: 5rem;
 }
@@ -179,9 +173,6 @@ p {
 
 /* DISTRIBUTION SECTION */
 .distributionSection {
-    padding-left: 5%;
-    padding-right: 20%;
-
     margin-bottom: 5rem;
 }
 
@@ -203,8 +194,6 @@ p {
 /* WHY SECTION */
 
 .whySection {
-    padding-left: 5%;
-    padding-right: 20%;
     margin-bottom: 5rem;
 }
 
@@ -220,8 +209,6 @@ p {
 /* HOW SECTION */
 
 .howSection {
-    padding-left: 5%;
-    padding-right: 20%;
     margin-bottom: 5rem;
 }
 
@@ -298,9 +285,6 @@ p {
 
 .closingSection {
     margin-top: 5rem;
-
-    padding-left: 5%;
-    padding-right: 20%;
 }
 
 .closingSection h3 {
