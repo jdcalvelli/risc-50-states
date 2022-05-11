@@ -8,7 +8,6 @@ import { StateInfo } from "./helperComponents/StateInfo";
 import { UseMapHelper } from "./helperComponents/UseMapHelper";
 import { LeafletPopup } from "./helperComponents/LeafletPopup";
 
-import { loadData } from "../tasks/loadData";
 import { determineStateColor } from '../tasks/determineStateColor'
 
 //this will be the leaflet map - which will need state i believe?
@@ -66,7 +65,7 @@ function MapSection(props) {
 
                 {/* fix this part after adding the new data script */}
                 <GeoJSON 
-                    data={loadData()} 
+                    data={props.loadedData} 
                     style={geoMapStyle}
                     onEachFeature={onEachState}
                 />
