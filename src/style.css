@@ -257,6 +257,12 @@ p {
 
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+
+    border-bottom: 1px solid var(--accent-grey);
+}
+
+.chartItem ul {
+    margin-bottom: 1.5rem;
 }
 
 /* this is left side with grade name */
