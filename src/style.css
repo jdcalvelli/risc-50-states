@@ -383,9 +383,7 @@ p {
     }
 
     /* DISTRIBUTION SECTION */
-    .distributionSection .breakdown {
-        gap: 5%;
-    }
+    
 
     /* HOW SECTION */
     .howSection .listSection ul li {

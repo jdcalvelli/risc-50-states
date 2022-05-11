@@ -25,7 +25,7 @@ root.render(
     <NavBarSection/>
     <HeadingSection/>
     <MapSection loadedData={loadedData}/>
-    <DistributionSection/>
+    <DistributionSection loadedData={loadedData}/>
     <WhySection/>
     <HowSection/>
     <ClosingSection/>
