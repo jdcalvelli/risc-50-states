@@ -87,6 +87,8 @@ p {
     display: flex;
     align-items: center;
 
+    justify-content: space-between;
+
     margin-bottom: 2rem;
 
     padding-left: 2.25%;
@@ -95,6 +97,11 @@ p {
 .navBarSection img {
     height: 110px;
     width: 110px;
+}
+
+.navBarSection a {
+    color: #121212;
+    font-weight: lighter;
 }
 
 /* HEADING SECTION */
