@@ -9,9 +9,6 @@ import { Bar } from 'react-chartjs-2';
 function DistributionSection(props) {
     
     const distributionReducer = (loadedData) => {
-        
-        console.log(loadedData)
-        
         const outputArray = [0, 0, 0, 0, 0];
 
         loadedData.forEach(item => {
@@ -41,7 +38,6 @@ function DistributionSection(props) {
             }
         })
 
-        console.log(outputArray)
         return outputArray;
     }
     
