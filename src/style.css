@@ -141,7 +141,7 @@ p {
     border-radius: 16px;
 
     height: 100%;
-    width: 55%;
+    width: 60%;
 }
 
 /* this is the right side where the information is */
@@ -149,7 +149,7 @@ p {
     padding: 1% 2.5%;
 
     height: 100%;
-    width: 40%;
+    width: 35%;
 
     overflow: scroll;
 }
