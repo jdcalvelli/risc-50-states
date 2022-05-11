@@ -53,6 +53,22 @@ function DistributionSection(props) {
 
             <Bar 
                 options={{
+                    scales: {
+                        y: {
+                            ticks: {
+                                display: false,
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false,
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                            }
+                        }
+                    },
                     plugins: {
                         legend: {
                             display: false,
