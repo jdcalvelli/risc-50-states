@@ -7,6 +7,44 @@ import { Bar } from 'react-chartjs-2';
 //display for grade counts
 
 function DistributionSection(props) {
+    
+    const distributionReducer = (loadedData) => {
+        
+        console.log(loadedData)
+        
+        const outputArray = [0, 0, 0, 0, 0];
+
+        loadedData.forEach(item => {
+            switch (item.properties['Grade for Visualization']) {
+                case 'A':
+                    outputArray[0]++
+                    break;
+
+                case 'B':
+                    outputArray[1]++
+                    break;
+
+                case 'C':
+                    outputArray[2]++
+                    break;
+
+                case 'D':
+                    outputArray[3]++
+                    break;
+                
+                case 'F':
+                    outputArray[4]++
+                    break;
+                
+                default:
+                    break;
+            }
+        })
+
+        console.log(outputArray)
+        return outputArray;
+    }
+    
     return (
         <div className="distributionSection">
             <h3>Grade Distribution Breakdown</h3>
@@ -19,11 +57,12 @@ function DistributionSection(props) {
                     datasets: [
                         {
                             label: 'test example',
-                            data: ['1', '2', '3', '4', '5']
+                            data: distributionReducer(props.loadedData)
                         }
                     ],
                 }}
-            />;
+            />
+
         </div>
     )
 }
