@@ -402,8 +402,13 @@ h3 {
     }
 
     /* HOW SECTION */
+
+    .howSection .listSection {
+        flex-direction: column;
+    }
+
     .howSection .listSection ul li {
-        margin: 10% 0;
+        margin: 5% 0;
     }
 
     .howSection .chartSection .chartItem {
