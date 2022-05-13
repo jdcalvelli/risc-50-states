@@ -9,7 +9,7 @@ function determineStateColor(property) {
             //return a royal blue
             return ({
                 fillColor: '#93C851',
-                fillOpacity: 0.5,
+                fillOpacity: 1,
                 weight: 1.5,
                 color: 'black',
             })
@@ -18,7 +18,7 @@ function determineStateColor(property) {
             //return a green
             return ({
                 fillColor: '#F3D65C',
-                fillOpacity: 0.5,
+                fillOpacity: 1,
                 weight: 1.5,
                 color: 'black'
             })
@@ -27,7 +27,7 @@ function determineStateColor(property) {
             //return a yellow
             return ({
                 fillColor: '#FF8634',
-                fillOpacity: 0.5,
+                fillOpacity: 1,
                 weight: 1.5,
                 color: 'black'
             })
@@ -36,7 +36,7 @@ function determineStateColor(property) {
             //return an orange
             return ({
                 fillColor: '#E24544',
-                fillOpacity: 0.5,
+                fillOpacity: 1,
                 weight: 1.5,
                 color: 'black'
             })
@@ -44,7 +44,7 @@ function determineStateColor(property) {
             //return a red
             return ({
                 fillColor: '#AA0201',
-                fillOpacity: 0.5,
+                fillOpacity: 1,
                 weight: 1.5,
                 color: 'black'
             })
@@ -53,7 +53,7 @@ function determineStateColor(property) {
             //return grey for no data
             return ({
                 fillColor: '#808080',
-                fillOpacity: 0.5,
+                fillOpacity: 1,
                 weight: 1.5,
                 color: 'black'
             })
