@@ -1,11 +1,15 @@
 import React from "react";
 
+//import chartjs core
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 import { Bar } from 'react-chartjs-2';
 
+//import chartjs plugins
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(ChartDataLabels)
+import ChartDeferred from 'chartjs-plugin-deferred';
+Chart.register(ChartDeferred)
 
 import { determineChartNameColor } from "../tasks/determineChartNameColor";
 
@@ -58,18 +62,16 @@ function DistributionSection(props) {
                 options={{
                     scales: {
                         y: {
-                            ticks: {
-                                display: false,
-                            },
-                            grid: {
-                                display: false,
-                                drawBorder: false,
-                            },
                             grace: '50%',
                         },
                         x: {
                             grid: {
                                 display: false,
+                            },
+                            title: {
+                                display: true,
+                                text: 'Number of States Per Grade',
+                                padding: 20
                             }
                         }
                     },
@@ -80,6 +82,12 @@ function DistributionSection(props) {
                         datalabels: {
                             anchor: 'end',
                             align: 'end',
+                        },
+                        deferred: {
+                            xOffset: 150,
+                            yOffset: '50%',
+                            delay: 350
+
                         }
                     }
                 }} 
