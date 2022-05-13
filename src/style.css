@@ -124,11 +124,7 @@ h1 {
 }
 
 h3 {
-    font-weight: lighter;
-}
-
-p {
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 /* NAVBAR SECTION */
@@ -226,19 +222,11 @@ p {
     margin-bottom: 5rem;
 }
 
-.distributionSection h1 {
-    font-size: 3rem;
-}
-
 .distributionSection h3 {
     color: var(--accent-text-color);
     margin-bottom: 1.5rem;
-}
 
-.distributionSection .breakdown {
-    display: flex;
-
-    gap: 10%;
+    font-size: 1.4rem;
 }
 
 /* WHY SECTION */
@@ -250,6 +238,8 @@ p {
 .whySection h3 {
     color: var(--accent-text-color);
     margin-bottom: 1.5rem;
+
+    font-size: 1.4rem;
 }
 
 .whySection p {
@@ -265,6 +255,8 @@ p {
 .howSection h3 {
     color: var(--accent-text-color);
     margin-bottom: 1.5rem;
+
+    font-size: 1.4rem;
 }
 
 .howSection .listSection {
@@ -314,6 +306,8 @@ p {
 
 .chartItem .chartGradeName h3 {
     margin-left: 40%;
+
+    font-size: 4rem;
 }
 
 /* this is the right side with criteria */
@@ -341,6 +335,8 @@ p {
 .closingSection h3 {
     color: var(--accent-text-color);
     margin-bottom: 1.5rem;
+
+    font-size: 1.4rem;
 }
 
 .closingSection p {
