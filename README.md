@@ -4,15 +4,9 @@ An interactive site and map created for the Center for RISC at UChicago to displ
 ### Tools Used:
 - HTML
 - CSS
-- Font Awesome 5 Free
-- Javascript
+- React
 - NPM
-- JQuery
-- ScrollMagic
-- Anime.js
-- R
-- R Tidyverse Package
-- R Leaflet and Leaflet Extras Packages
-- R SF Package
-- R HTMLTools Package
+- Chart JS
+- Leaflet JS
+- R (for data cleaning :D)
 - Vite Bundler
